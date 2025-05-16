@@ -1,33 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { Layoutprops } from './layoutprops';
+import { Layoutprops } from './Layoutprops';
 import { ActivatedRoute, Router } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { filter, map } from 'rxjs'
+import { AuthgoogleService } from '../../authgoogle.service';
 
 @Component({
   selector: 'app-layout',
   standalone: false,
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss',
+  styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit {
   props: Layoutprops = { titulo: '', subTitulo: '' };
 
-  constructor(private router: Router, private ativatedRoute: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private loginService: AuthgoogleService
+  ){}
 
   ngOnInit(): void {
-    this.router.events.pipe(
-      filter(() => this.ativatedRoute.firstChild !== null),
-      map (() => this.obterPropriedadeLayout())
-    ).subscribe((props: Layoutprops) => this.props = props);
+    this.router.events
+      .pipe(
+        filter( () => this.activatedRoute.firstChild !== null ),
+        map( () => this.obterPropriedadeLayout() )
+      ).subscribe((props: Layoutprops) => this.props = props )
   }
 
-  obterPropriedadeLayout(): Layoutprops {
-    let rotafilha = this.ativatedRoute.firstChild;
+  obterPropriedadeLayout() : Layoutprops {
+    let rotaFilha = this.activatedRoute.firstChild;
 
-    while (rotafilha?.firstChild) {
-      rotafilha = rotafilha.firstChild;
+    while(rotaFilha?.firstChild){
+      rotaFilha = rotaFilha.firstChild;
     }
 
-    return rotafilha?.snapshot.data as Layoutprops;
+    return rotaFilha?.snapshot.data as Layoutprops;
+  }
+
+  logout(){
+    this.loginService.logout();
   }
 }
