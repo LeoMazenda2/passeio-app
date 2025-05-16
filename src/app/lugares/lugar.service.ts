@@ -24,7 +24,7 @@ export class LugarService {
       parametros = parametros.set('nome_like', nome);
     }
 
-    if(categoria){
+    if(categoria && categoria !== '0'){
       parametros = parametros.set('categoria', categoria);
     }
 

@@ -14,7 +14,7 @@
         name="categoriaFiltro" 
         [(ngModel)]="categoriaFiltro"
         class="w-full border border-gray-300 p-2 rounded shadow-sm focus:ring focus:ring-blue-400">
-        <option [value]="" selected>Todas as Categorias</option>
+        <option [value]="0" selected>Todas as Categorias</option>
         <option *ngFor="let cat of categoriasFiltro" [value]="cat.nome">
           {{ cat.nome }}
         </option>
