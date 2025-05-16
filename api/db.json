@@ -12,7 +12,7 @@
     },
     {
       "id": "89eb",
-      "nome": "Restaurantes Editado",
+      "nome": "Restaurantes",
       "descricao": "Lugares para se akimentar"
     },
     {
@@ -40,7 +40,7 @@
     {
       "id": "3486",
       "nome": "Bar do LV",
-      "categoria": "Restaurantes Editado",
+      "categoria": "Restaurantes",
       "localizacao": "Luanda, Rangel ",
       "urlFoto": "https://th.bing.com/th/id/OIP.e661R5vycAgbq7iStkKQAQHaD4?rs=1&pid=ImgDetMain",
       "avaliacao": "3"
@@ -56,7 +56,7 @@
     {
       "id": "6b6a",
       "nome": "Restaurante José da XD",
-      "categoria": "Restaurantes Editado",
+      "categoria": "Restaurantes",
       "localizacao": "Luanda, Benfica",
       "urlFoto": "https://th.bing.com/th/id/R.5860a3aeef7396580fef9c6eb34a6744?rik=yIwu7y86CUFTzw&pid=ImgRaw&r=0",
       "avaliacao": "5"
