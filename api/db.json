@@ -35,5 +35,23 @@
       "nome": "Teste de 323",
       "descricao": "Teste de asdr"
     }
+  ],
+  "lugares": [
+    {
+      "id": "3486",
+      "nome": "Bar do LV",
+      "categoria": "Restaurantes Editado",
+      "localizacao": "Luanda, Rangel ",
+      "urlFoto": "https://th.bing.com/th/id/OIP.e661R5vycAgbq7iStkKQAQHaD4?rs=1&pid=ImgDetMain",
+      "avaliacao": "3"
+    },
+    {
+      "id": "d704",
+      "nome": "Ilha do mussulo",
+      "categoria": "Praias ",
+      "localizacao": "Luanda, Mussulo",
+      "urlFoto": "https://welcometoangola.co.ao/wp-content/uploads/2021/06/Ilha-de-Luanda....jpg",
+      "avaliacao": "4"
+    }
   ]
 }
