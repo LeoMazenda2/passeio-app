@@ -1,12 +1,13 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { OAuthService, AuthConfig } from 'angular-oauth2-oidc';
-import { auth } from './auth.config';
-import { Router } from '@angular/router';
+import { OAuthService, AuthConfig } from 'angular-oauth2-oidc'
+import { auth } from './auth.config'
+import { Router } from '@angular/router'
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthgoogleService {
+
   private oauthService: OAuthService = inject(OAuthService);
   private router: Router = inject(Router);
   profile = signal<any>(null);
@@ -15,11 +16,11 @@ export class AuthgoogleService {
     this.initConfiguration();
   }
 
-  initConfiguration() {
+  initConfiguration(){
     this.oauthService.configure(auth);
     this.oauthService.setupAutomaticSilentRefresh();
     this.oauthService.loadDiscoveryDocumentAndTryLogin().then(() => {
-      if(this.oauthService.hasValidAccessToken()){
+      if(this.oauthService.hasValidIdToken()){
         this.profile.set(this.oauthService.getIdentityClaims());
       }
     });
@@ -33,6 +34,10 @@ export class AuthgoogleService {
     this.oauthService.revokeTokenAndLogout();
     this.oauthService.logOut();
     this.profile.set(null);
-    this.router.navigate(['']);
+    this.router.navigate([''])
+  }
+
+  getLoggedProfile(){
+    return this.profile();
   }
 }
