@@ -38,14 +38,6 @@
   ],
   "lugares": [
     {
-      "id": "3486",
-      "nome": "Bar do LV",
-      "categoria": "Restaurantes",
-      "localizacao": "Luanda, Rangel ",
-      "urlFoto": "https://th.bing.com/th/id/OIP.e661R5vycAgbq7iStkKQAQHaD4?rs=1&pid=ImgDetMain",
-      "avaliacao": "3"
-    },
-    {
       "id": "6b6a",
       "nome": "Restaurante José da XD",
       "categoria": "Restaurantes",
