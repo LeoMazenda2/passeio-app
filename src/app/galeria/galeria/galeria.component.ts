@@ -12,7 +12,9 @@ import { CategoriaService } from '../../categorias/categoria.service';
 })
 export class GaleriaComponent implements OnInit {
   lugares: Lugar[] = [];
-  categoriaFiltro: Categoria[] = [];
+  categoriasFiltro: Categoria[] = [];
+  nomeFiltro: string ='';
+  categoriaFiltro: string ='';
 
   constructor(
     private lugarService: LugarService,
@@ -21,7 +23,7 @@ export class GaleriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.categoriaService.obterTodas()
-      .subscribe(c => (this.categoriaFiltro = c));
+      .subscribe(c => (this.categoriasFiltro = c));
 
       this.lugarService.onterTodos()
       .subscribe(l => (this.lugares = l));
@@ -29,6 +31,10 @@ export class GaleriaComponent implements OnInit {
 
   getTotalEstrelas(lugar: Lugar) : string{
     return '&#9733;'.repeat(lugar.avaliacao || 0) + '&#9734;'.repeat(5 - (lugar.avaliacao || 0))
+  }
 
+  filtrar(){
+    this.lugarService.filtarComLike(this.nomeFiltro, this.categoriaFiltro)
+    .subscribe(result => this.lugares = result)
   }
 }
