@@ -14,6 +14,26 @@
       "id": "89eb",
       "nome": "Restaurantes Editado",
       "descricao": "Lugares para se akimentar"
+    },
+    {
+      "id": "513f",
+      "nome": "Praias ",
+      "descricao": "Lugar para banhar e passear "
+    },
+    {
+      "id": "64aa",
+      "nome": "Praias 333 ",
+      "descricao": "Lugar para banhar e passear 444 "
+    },
+    {
+      "id": "4943",
+      "nome": "Teste de lugar ",
+      "descricao": "Teste de lugar "
+    },
+    {
+      "id": "3cb9",
+      "nome": "Teste de 323",
+      "descricao": "Teste de asdr"
     }
   ]
 }
