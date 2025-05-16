@@ -1,9 +1,19 @@
 {
-    "categorias" : [
-        {
-            "id" : "1",
-            "nome" : "Restaurantes",
-            "descricao" : "Luagres para se alimentar"
-        }
-    ]
+  "categorias": [
+    {
+      "id": "2",
+      "nome": "Cidades",
+      "descricao": "Cidades lindas para viajar e conhecer"
+    },
+    {
+      "id": "3",
+      "nome": "Shopping",
+      "descricao": "Lugares para fazeer compras e passear"
+    },
+    {
+      "id": "89eb",
+      "nome": "Restaurantes Editado",
+      "descricao": "Lugares para se akimentar"
+    }
+  ]
 }
