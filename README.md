@@ -26,7 +26,7 @@ O **Passeio App** é uma aplicação completa desenvolvida em Angular 19, que pe
 
 ### 1. Build das imagens Docker
 
-Clone o repositório e, no terminal, execute:
+Clone o repositório e, no terminal, dentro da raiz do projecto execute esses comandos execute:
 
 ```sh
 # Build da imagem do frontend Angular
@@ -51,12 +51,9 @@ docker run -d --name passeio-frontend -p 4200:80 passeio-frontend
 ```
 
 ---
-
 ### 3. Acessar a aplicação
-
-- **Frontend:** http://localhost
-- **Backend (API):** http://localhost:4200
-
+- **Frontend:** <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
+- **Backend (API):** <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>
 ---
 
 ## Observações
