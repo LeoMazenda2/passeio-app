@@ -54,8 +54,8 @@ docker run -d --name passeio-frontend -p 4200:80 passeio-frontend
 
 ### 3. Acessar a aplicação
 
-- **Frontend:** <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
-- **Backend (API):** <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>
+- **Frontend:** [http://localhost:4200](http://localhost:4200) (abrir em nova aba)
+- **Backend (API):** [http://localhost:4000](http://localhost:4000) (abrir em nova aba)
 
 ---
 
