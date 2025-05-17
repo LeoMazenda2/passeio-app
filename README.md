@@ -44,10 +44,10 @@ cd ..
 
 ```sh
 # Rodar o backend (json-server) na porta 4000
-docker run -d --name passeio-api -p 4000:4000 passeio-api
+docker run -d --name passeio-api -p 5000:4000 passeio-api
 
 # Rodar o frontend (Angular/Nginx) na porta 80
-docker run -d --name passeio-frontend -p 4200:80 passeio-frontend
+docker run -d --name passeio-frontend -p 5001:80 passeio-frontend
 ```
 
 ---
@@ -58,7 +58,7 @@ docker run -d --name passeio-frontend -p 4200:80 passeio-frontend
 
 ## Observações
 
-- Certifique-se de que as portas 80 e 4200 estejam livres.
+- Certifique-se de que as portas 5000 e 5001 estejam livres.
 - O frontend está configurado para consumir a API em `http://localhost:4000`.
 - Para parar e remover os containers:
   ```sh
