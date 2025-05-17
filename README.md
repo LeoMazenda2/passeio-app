@@ -47,7 +47,7 @@ cd ..
 docker run -d --name passeio-api -p 4000:4000 passeio-api
 
 # Rodar o frontend (Angular/Nginx) na porta 80
-docker run -d --name passeio-frontend -p 80:80 passeio-frontend
+docker run -d --name passeio-frontend -p 80:4200 passeio-frontend
 ```
 
 ---
