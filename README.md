@@ -26,7 +26,7 @@ O **Passeio App** é uma aplicação completa desenvolvida em Angular 19, que pe
 
 ### 1. Build das imagens Docker
 
-Clone o repositório e, no terminal, execute:
+Clone o repositório e, no terminal, dentro da raiz do projecto execute esses comandos execute:
 
 ```sh
 # Build da imagem do frontend Angular
