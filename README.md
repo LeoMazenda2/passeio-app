@@ -61,7 +61,7 @@ docker run -d --name passeio-frontend -p 4200:80 passeio-frontend
 
 ## Observações
 
-- Certifique-se de que as portas 80 e 4000 estejam livres.
+- Certifique-se de que as portas 80 e 4200 estejam livres.
 - O frontend está configurado para consumir a API em `http://localhost:4000`.
 - Para parar e remover os containers:
   ```sh
