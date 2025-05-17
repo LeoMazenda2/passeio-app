@@ -52,14 +52,14 @@ docker run -d --name passeio-frontend -p 5001:80 passeio-frontend
 
 ---
 ### 3. Acessar a aplicação
-- **Frontend:** <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
-- **Backend (API):** <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>
+- **Frontend:** <a href="http://localhost:5001" target="_blank">http://localhost:5001</a>
+- **Backend (API):** <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>
 ---
 
 ## Observações
 
 - Certifique-se de que as portas 5000 e 5001 estejam livres.
-- O frontend está configurado para consumir a API em `http://localhost:4000`.
+- O frontend está configurado para consumir a API em `http://localhost:5001`.
 - Para parar e remover os containers:
   ```sh
   docker stop passeio-frontend passeio-api
