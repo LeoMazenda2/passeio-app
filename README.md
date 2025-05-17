@@ -1,59 +1,72 @@
-# PasseioApp
+# Passeio App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+O **Passeio App** é uma aplicação completa desenvolvida em Angular 19, que permite o cadastro e gerenciamento de lugares turísticos, cada um associado a categorias também cadastráveis. O projeto demonstra o uso de diversas técnicas modernas de desenvolvimento frontend e backend, proporcionando uma experiência rica tanto para usuários quanto para desenvolvedores.
 
-## Development server
+## Principais funcionalidades e tecnologias
 
-To start a local development server, run:
+- **Cadastro de lugares e categorias:** Gerencie facilmente diferentes locais e suas respectivas categorias.
+- **Angular 19:** Estrutura robusta para aplicações SPA modernas.
+- **Material Design & TailwindCSS:** Interfaces bonitas, responsivas e fáceis de usar.
+- **Consumo de APIs REST:** Comunicação eficiente com backend via HttpClient.
+- **Login social com Google (OAuth2):** Autenticação segura e prática.
+- **Roteamento avançado:** Inclui lazy loading para melhor performance.
+- **Forms reativos:** Validação e manipulação de formulários de forma eficiente.
+- **State management com RxJS:** Gerenciamento de estado reativo e escalável.
+- **json-server:** Backend simulado para facilitar o desenvolvimento e testes.
 
-```bash
-ng serve
+---
+
+## Pré-requisitos
+
+- [Docker](https://www.docker.com/) instalado na máquina
+
+---
+
+## Como rodar
+
+### 1. Build das imagens Docker
+
+Clone o repositório e, no terminal, execute:
+
+```sh
+# Build da imagem do frontend Angular
+docker build -t passeio-frontend .
+
+# Build da imagem do backend json-server
+cd api
+docker build -t passeio-api .
+cd ..
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+### 2. Rodar os containers
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```sh
+# Rodar o backend (json-server) na porta 4000
+docker run -d --name passeio-api -p 4000:4000 passeio-api
 
-```bash
-ng generate component component-name
+# Rodar o frontend (Angular/Nginx) na porta 80
+docker run -d --name passeio-frontend -p 80:80 passeio-frontend
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+### 3. Acessar a aplicação
 
-## Building
+- **Frontend:** http://localhost
+- **Backend (API):** http://localhost:4000
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Observações
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Certifique-se de que as portas 80 e 4000 estejam livres.
+- O frontend está configurado para consumir a API em `http://localhost:4000`.
+- Para parar e remover os containers:
+  ```sh
+  docker stop passeio-frontend passeio-api
+  docker rm passeio-frontend passeio-api
+  ```
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
